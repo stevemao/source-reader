@@ -1,6 +1,6 @@
 Source-reader: A better way to learn source code
 =============
-This project is targeting junior to middle level JavaScript developers who want to learn source code (eg jQuery) so they can learn a good coding style, code snippets and possibly build extensions. Eventually there will be source code of other language other than JavaScript.
+This project is targeting junior to middle level JavaScript developers who want to learn source code (eg jQuery) so they can adapt to a good coding style, master code snippets and possibly build extensions. Eventually there will be source code of other language other than JavaScript.
 
 Motivations
 =============
