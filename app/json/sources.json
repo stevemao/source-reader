@@ -1,0 +1,9 @@
+sources: [{
+    "name": "jQuery",
+    "version": "1.11.0",
+    "file": "jQuery-1.11.0.js"
+}, {
+    "name": "jQuery",
+    "version": "1.10.2",
+    "file": "jQuery-1.10.2.js"
+}]
