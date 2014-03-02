@@ -1,0 +1,18 @@
+{
+    "blocks": [{
+        "title": "Object jQuery",
+        "startline": 1,
+        "endline": 10338
+    }, {
+        "title": "jQuery Core",
+        "startline": 1,
+        "endline": 10338
+    }],
+
+    "extraInfo": [{
+        "startline": 1,
+        "endline": 1,
+        "info": "info"
+    }]
+
+}

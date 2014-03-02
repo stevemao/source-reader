@@ -41,12 +41,11 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        width:100%;
     }
 
     /* Remove the padding we set earlier */
     .header,
-    .marketing,
     .footer {
         padding-left: 0;
         padding-right: 0;
@@ -56,9 +55,5 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     .header {
         margin-bottom: 30px;
     }
-    
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+
 }
