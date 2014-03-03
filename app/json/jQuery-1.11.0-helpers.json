@@ -1,13 +1,17 @@
 {
     "blocks": [{
-        "title": "Object jQuery",
+        "collapseId": "collapse_1",
+        "title": "Object: jQuery",
+        "level": "h1",
         "startline": 1,
-        "endline": 10338
-    }, {
-        "title": "jQuery Core",
-        "startline": 1,
-        "endline": 10338
+        "endline": 10338,
+        "collapseFrom": 1,
+        "collapseTo": 13
     }],
+
+
+
+
 
     "extraInfo": [{
         "startline": 1,

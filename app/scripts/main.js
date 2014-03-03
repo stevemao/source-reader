@@ -1,26 +1,38 @@
 'use strict';
 
-function selectSource(source) {
+$('a[data-source="jQuery-1.11.0"]').click(function() {
+    selectAndBrushCode('jquery-1.11.0');
+});
+
+function selectAndBrushCode(source) {
     $('.content').html('LOADING...');
-    $.ajax({
-        url: 'sources/' + source + '.source',
-        success: function(rawCode) {
-            brushCode(rawCode);
-            setCodeBlock(1, 10, 'Object jQuery');
-        }
+    var blocks;
+    $.when(
+        $.ajax({
+            url: 'sources/' + source + '.source',
+            success: function(rawCode) {
+                brushCode(rawCode);
+            }
+        }), $.ajax({
+            url: 'json/' + source + '-helpers.json',
+            success: function(sourceHelpers) {
+                blocks = sourceHelpers.blocks;
+            }
+        })
+    ).
+    then(function() {
+        blocks.forEach(function(block) {
+            setCodeBlock(block.startline, block.endline, block.collapseFrom, block.collapseTo, block.title, block.collapseId);
+        });
     });
 }
 
 function brushCode(rawCode) {
-    var encodedCode = '';
-    encodedCode = htmlEncode(rawCode);
-
+    var encodedCode = htmlEncode(rawCode);
     $('.content').html('<pre class="brush:js">' + encodedCode + '</pre>');
     SyntaxHighlighter.defaults['quick-code'] = false;
     SyntaxHighlighter.highlight();
-
 }
-
 
 function htmlEncode(value) {
     //create a in-memory div, set it's inner text(which jQuery automatically encodes)
@@ -28,19 +40,14 @@ function htmlEncode(value) {
     return $('<div/>').text(value).html();
 }
 
-function setCodeBlock(startline, endline, title) {
-    $('.code .line.number' + startline).before('<h1><a data-toggle="collapse" data-target=".test" href="#">' + title + '</a></h1>');
-    $('.gutter .line.number' + startline).before('<h1><a data-toggle="collapse" data-target=".test" href="#">-</a></h1>');
-    $('.gutter .line.number' + startline).nextUntil('.gutter .line.number' + endline).andSelf().wrapAll('<div class="panel-collapse collapse test"></div>');
-    $('.code .line.number' + startline).nextUntil('.code .line.number' + endline).andSelf().wrapAll('<div class="panel-collapse collapse test"></div>');
+function setCodeBlock(startline, endline, collapseFrom, collapseTo, title, collapseId) {
+    //handle collapse
+    $('.code .line.number' + collapseFrom).before('<h1><a data-toggle="collapse" data-target=".' + collapseId + '" href="#">' + title + '</a></h1>')
+        .nextUntil('.code .line.number' + collapseTo).andSelf().wrapAll('<div class="panel - collapse collapse ' + collapseId + '"></div>');
+    $('.gutter .line.number' + collapseFrom).before('<h1><a data-toggle="collapse" data-target=".' + collapseId + '" href="#">-</a></h1>')
+        .nextUntil('.gutter .line.number' + collapseTo).andSelf().wrapAll('<div class="panel-collapse collapse ' + collapseId + '"></div>');
+    $('.' + collapseId).collapse();
 
-    $('.test').collapse();
+    //handle color
+    //$('.gutter .line.number' + startline).nextUntil('.gutter .line.number' + endline).andSelf().css('background', 'red');
 }
-
-$('a[data-source="jQuery-1.11.0"]').click(function() {
-    selectSource('jquery-1.11.0');
-});
-
-$('a[data-source="jQuery-1.10.2"]').click(function() {
-    selectSource('jquery-1.10.2');
-});
