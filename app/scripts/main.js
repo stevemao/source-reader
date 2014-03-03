@@ -6,7 +6,7 @@ function selectSource(source) {
         url: 'sources/' + source + '.source',
         success: function(rawCode) {
             brushCode(rawCode);
-            //setCodeBlock(1, 10, 'Object jQuery');
+            setCodeBlock(1, 10, 'Object jQuery');
         }
     });
 }
@@ -28,17 +28,13 @@ function htmlEncode(value) {
     return $('<div/>').text(value).html();
 }
 
-// SyntaxHighlighter generates some extra tags at the end.
-// todo: find out what causes this
-function clearWrongTags(lastLine) {
-    console.log(lastLine);
-    $('.code .line.number9800').html('');
-}
-
 function setCodeBlock(startline, endline, title) {
-    $('.code .line.number' + startline).before('<h1><a data-toggle="collapse" data-target="#test" href="#">' + title + '</a></h1>');
-    $('.code .line.number' + startline).nextUntil('.code .line.number' + endline).andSelf().wrapAll('<div id="test" class="panel-collapse collapse"></div>');
-    $('#test').collapse();
+    $('.code .line.number' + startline).before('<h1><a data-toggle="collapse" data-target=".test" href="#">' + title + '</a></h1>');
+    $('.gutter .line.number' + startline).before('<h1><a data-toggle="collapse" data-target=".test" href="#">-</a></h1>');
+    $('.gutter .line.number' + startline).nextUntil('.gutter .line.number' + endline).andSelf().wrapAll('<div class="panel-collapse collapse test"></div>');
+    $('.code .line.number' + startline).nextUntil('.code .line.number' + endline).andSelf().wrapAll('<div class="panel-collapse collapse test"></div>');
+
+    $('.test').collapse();
 }
 
 $('a[data-source="jQuery-1.11.0"]').click(function() {
