@@ -11,13 +11,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding: 0.2em 0;
 }
 
-#menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 100;
-}
-
 /* Everything gets side spacing for mobile first views */
 
 .header,
@@ -60,6 +53,16 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
             color: #FF9900;
         }
     }
+}
+
+#rightBar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    width:20%;
+    height:calc(100% - 40px);
+    overflow:auto;
 }
 
 #menu {

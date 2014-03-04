@@ -1,7 +1,8 @@
 'use strict';
-
+var time = 0;
 $('a[data-source="jQuery-1.11.0"]').click(function() {
     selectAndBrushCode('jquery-1.11.0');
+    time = Date.now();
 });
 
 function selectAndBrushCode(source) {
@@ -28,6 +29,8 @@ function selectAndBrushCode(source) {
             $('body').scrollspy({
                 target: '#menu'
             });
+            var finishTime = Date.now();
+            console.log(finishTime - time);
         });
 }
 
@@ -46,44 +49,19 @@ function htmlEncode(value) {
 
 function setCodeBlock(block) {
     //handle collapse
-
     var $title = $('<a></a>', {
-        'data-toggle': 'collapse',
-        'data-target': '.' + block.blockId,
-        'href': 'javascript:void(0)',
-        'id': block.blockId,
-        on: {
-            click: function() {
-                if ($('#toggle_' + block.blockId).children().html() === '+') {
-                    $('#toggle_' + block.blockId).children().html('-');
-                } else if ($('#toggle_' + block.blockId).children().html() === '-') {
-                    $('#toggle_' + block.blockId).children().html('+');
-                }
-                $('body').scrollspy('refresh');
-            }
-        }
+        'href': '#' + block.title,
+        'id': block.title,
     }).append('<' + block.level + '>' + block.title + '</' + block.level + '>');
 
-    var $toggle = $title.clone().attr('id', 'toggle_' + block.blockId);
+    var $toggle = $title.clone().attr('id', 'toggle_' + block.title);
 
-
-    var $wrapper = $('<div></div>').addClass('panel-collapse collapse ' + block.blockId);
-
-    if (block.endline) {
-        $toggle.children().html('-');
-        $('.code .line.number' + block.startline).before($title)
-            .nextUntil('.code .line.number' + (block.endline + 1)).andSelf().wrapAll($wrapper);
-        $('.gutter .line.number' + block.startline).before($toggle)
-            .nextUntil('.gutter .line.number' + (block.endline + 1)).andSelf().wrapAll($wrapper);
-        $('.' + block.blockId).collapse();
-    } else {
-        $toggle.children().html('*');
-        $('.code .line.number' + block.startline).before($title);
-        $('.gutter .line.number' + block.startline).before($toggle);
-    }
+    $toggle.children().html('*');
+    $('.code .line.number' + block.startline).before($title);
+    $('.gutter .line.number' + block.startline).before($toggle);
 
     //setup menu
-    $('#menu ul').append('<li><a href="#' + block.blockId + '"><' + block.level + '>' + block.title + '</' + block.level + '></a></li>');
+    $('#menu ul').append('<li><a href="#' + block.title + '"><' + block.level + '>' + block.title + '</' + block.level + '></a></li>');
 
     //handle color
     //$('.gutter .line.number' + startline).nextUntil('.gutter .line.number' + endline).andSelf().css('background', 'red');

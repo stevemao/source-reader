@@ -1,87 +1,182 @@
 {
     "blocks": [{
-            "blockId": "block_1",
             "title": "Module: Core",
             "level": "h1",
             "startline": 16
         }, {
-            "blockId": "block_3",
             "title": "Variables",
             "level": "h4",
             "startline": 46,
             "endline": 89
         }, {
-            "blockId": "block_4",
-            "title": "Function: toArray()",
+            "title": "jQuery.fn.toArray()",
             "level": "h5",
             "startline": 102,
             "endline": 104
         }, {
-            "blockId": "block_5",
-            "title": "Function: get()",
+            "title": "jQuery.fn.get()",
             "level": "h5",
             "startline": 106,
             "endline": 116
         }, {
-            "blockId": "block_6",
-            "title": "Function: pushStack()",
+            "title": "jQuery.fn.pushStack()",
             "level": "h5",
             "startline": 118,
             "endline": 131
         }, {
-            "blockId": "block_7",
-            "title": "Function: each()",
+            "title": "jQuery.fn.each()",
             "level": "h5",
             "startline": 133,
             "endline": 138
         }, {
-            "blockId": "block_8",
-            "title": "Function: map()",
+            "title": "jQuery.fn.map()",
             "level": "h5",
             "startline": 140,
             "endline": 144
         }, {
-            "blockId": "block_9",
-            "title": "Function: slice()",
+            "title": "jQuery.fn.slice()",
             "level": "h5",
             "startline": 146,
             "endline": 148
         }, {
-            "blockId": "block_10",
-            "title": "Function: first()",
+            "title": "jQuery.fn.first()",
             "level": "h5",
             "startline": 150,
             "endline": 152
         }, {
-            "blockId": "block_11",
-            "title": "Function: last()",
+            "title": "jQuery.fn.last()",
             "level": "h5",
             "startline": 154,
             "endline": 156
         }, {
-            "blockId": "block_12",
-            "title": "Function: eq()",
+            "title": "jQuery.fn.eq()",
             "level": "h5",
             "startline": 158,
             "endline": 162
         }, {
-            "blockId": "block_13",
-            "title": "Function: end()",
+            "title": "jQuery.fn.end()",
             "level": "h5",
             "startline": 164,
             "endline": 166
         }, {
-            "blockId": "block_14",
             "title": "Internal functions",
             "level": "h4",
             "startline": 168,
             "endline": 172
         }, {
-            "blockId": "block_15",
             "title": "jQuery.extend()",
             "level": "h3",
             "startline": 175,
             "endline": 238
+        }, {
+            "title": "jQuery.extend()",
+            "level": "h3",
+            "startline": 175,
+            "endline": 238
+        }, {
+            "title": "jQuery.error()",
+            "level": "h3",
+            "startline": 247,
+            "endline": 249
+        }, {
+            "title": "jQuery.noop()",
+            "level": "h3",
+            "startline": 251
+        }, {
+            "title": "jQuery.isFunction()",
+            "level": "h3",
+            "startline": 253,
+            "endline": 258
+        }, {
+            "title": "jQuery.isArray()",
+            "level": "h3",
+            "startline": 260,
+            "endline": 262
+        }, {
+            "title": "jQuery.isWindow()",
+            "level": "h3",
+            "startline": 264,
+            "endline": 267
+        }, {
+            "title": "jQuery.isNumeric()",
+            "level": "h3",
+            "startline": 269,
+            "endline": 274
+        }, {
+            "title": "jQuery.isEmptyObject()",
+            "level": "h3",
+            "startline": 276,
+            "endline": 282
+        }, {
+            "title": "jQuery.isPlainObject()",
+            "level": "h3",
+            "startline": 284,
+            "endline": 391
+        }, {
+            "title": "jQuery.type()",
+            "level": "h3",
+            "startline": 321,
+            "endline": 328
+        }, {
+            "title": "jQuery.globalEval()",
+            "level": "h3",
+            "startline": 330,
+            "endline": 342
+        }, {
+            "title": "jQuery.camelCase()",
+            "level": "h3",
+            "startline": 346,
+            "endline": 348
+        }, {
+            "title": "jQuery.nodeName()",
+            "level": "h3",
+            "startline": 350,
+            "endline": 352
+        }, {
+            "title": "jQuery.each()",
+            "level": "h3",
+            "startline": 354,
+            "endline": 402
+        }, {
+            "title": "jQuery.each()",
+            "level": "h3",
+            "startline": 354,
+            "endline": 402
+        }, {
+            "title": "jQuery.trim()",
+            "level": "h3",
+            "startline": 404,
+            "endline": 417
+        }, {
+            "title": "jQuery.makeArray()",
+            "level": "h3",
+            "startline": 419,
+            "endline": 435
+        }, {
+            "title": "jQuery.inArray()",
+            "level": "h3",
+            "startline": 437,
+            "endline": 457
+        }, {
+            "title": "jQuery.merge()",
+            "level": "h3",
+            "startline": 459,
+            "endline": 479
+        }, {
+            "title": "jQuery.grep()",
+            "level": "h3",
+            "startline": 481,
+            "endline": 498
+        }, {
+            "title": "jQuery.map()",
+            "level": "h3",
+            "startline": 500,
+            "endline": 531
+        }, {
+            "title": "jQuery.map()",
+            "level": "h3",
+            "startline": 500,
+            "endline": 531
         },
 
 
@@ -94,7 +189,7 @@
 
         {
             "blockId": "block_200",
-            "title": "Function: init()",
+            "title": "init()",
             "level": "h5",
             "startline": 2727,
             "endline": 2830
