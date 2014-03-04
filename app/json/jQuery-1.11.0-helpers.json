@@ -1,182 +1,165 @@
 {
     "blocks": [{
             "title": "Module: Core",
-            "level": "h1",
-            "startline": 16
+            "style": "h1",
+            "line": 15
         }, {
-            "title": "Variables",
-            "level": "h4",
-            "startline": 46,
-            "endline": 89
+            "title": "Internal variables",
+            "style": "h4",
+            "line": 46
         }, {
             "title": "jQuery.fn.toArray()",
-            "level": "h5",
-            "startline": 102,
-            "endline": 104
+            "style": "h5",
+            "line": 102
         }, {
             "title": "jQuery.fn.get()",
-            "level": "h5",
-            "startline": 106,
-            "endline": 116
+            "style": "h5",
+            "line": 106
         }, {
             "title": "jQuery.fn.pushStack()",
-            "level": "h5",
-            "startline": 118,
-            "endline": 131
+            "style": "h5",
+            "line": 118
         }, {
             "title": "jQuery.fn.each()",
-            "level": "h5",
-            "startline": 133,
-            "endline": 138
+            "style": "h5",
+            "line": 133
         }, {
             "title": "jQuery.fn.map()",
-            "level": "h5",
-            "startline": 140,
-            "endline": 144
+            "style": "h5",
+            "line": 140
         }, {
             "title": "jQuery.fn.slice()",
-            "level": "h5",
-            "startline": 146,
-            "endline": 148
+            "style": "h5",
+            "line": 146
         }, {
             "title": "jQuery.fn.first()",
-            "level": "h5",
-            "startline": 150,
-            "endline": 152
+            "style": "h5",
+            "line": 150
         }, {
             "title": "jQuery.fn.last()",
-            "level": "h5",
-            "startline": 154,
-            "endline": 156
+            "style": "h5",
+            "line": 154
         }, {
             "title": "jQuery.fn.eq()",
-            "level": "h5",
-            "startline": 158,
-            "endline": 162
+            "style": "h5",
+            "line": 158
         }, {
             "title": "jQuery.fn.end()",
-            "level": "h5",
-            "startline": 164,
-            "endline": 166
+            "style": "h5",
+            "line": 164
         }, {
-            "title": "Internal functions",
-            "level": "h4",
-            "startline": 168,
-            "endline": 172
+            "title": "Internal use",
+            "style": "h4",
+            "line": 168
         }, {
             "title": "jQuery.extend()",
-            "level": "h3",
-            "startline": 175,
-            "endline": 238
-        }, {
-            "title": "jQuery.extend()",
-            "level": "h3",
-            "startline": 175,
-            "endline": 238
+            "style": "h3",
+            "line": 175
         }, {
             "title": "jQuery.error()",
-            "level": "h3",
-            "startline": 247,
-            "endline": 249
+            "style": "h3",
+            "line": 247
         }, {
             "title": "jQuery.noop()",
-            "level": "h3",
-            "startline": 251
+            "style": "h3",
+            "line": 251
         }, {
             "title": "jQuery.isFunction()",
-            "level": "h3",
-            "startline": 253,
-            "endline": 258
+            "style": "h3",
+            "line": 253
         }, {
             "title": "jQuery.isArray()",
-            "level": "h3",
-            "startline": 260,
-            "endline": 262
+            "style": "h3",
+            "line": 260
         }, {
             "title": "jQuery.isWindow()",
-            "level": "h3",
-            "startline": 264,
-            "endline": 267
+            "style": "h3",
+            "line": 264
         }, {
             "title": "jQuery.isNumeric()",
-            "level": "h3",
-            "startline": 269,
-            "endline": 274
+            "style": "h3",
+            "line": 269
         }, {
             "title": "jQuery.isEmptyObject()",
-            "level": "h3",
-            "startline": 276,
-            "endline": 282
+            "style": "h3",
+            "line": 276
         }, {
             "title": "jQuery.isPlainObject()",
-            "level": "h3",
-            "startline": 284,
-            "endline": 391
+            "style": "h3",
+            "line": 284
         }, {
             "title": "jQuery.type()",
-            "level": "h3",
-            "startline": 321,
-            "endline": 328
+            "style": "h3",
+            "line": 321
         }, {
             "title": "jQuery.globalEval()",
-            "level": "h3",
-            "startline": 330,
-            "endline": 342
+            "style": "h3",
+            "line": 330
         }, {
             "title": "jQuery.camelCase()",
-            "level": "h3",
-            "startline": 346,
-            "endline": 348
+            "style": "h3",
+            "line": 346
         }, {
             "title": "jQuery.nodeName()",
-            "level": "h3",
-            "startline": 350,
-            "endline": 352
+            "style": "h3",
+            "line": 350
         }, {
             "title": "jQuery.each()",
-            "level": "h3",
-            "startline": 354,
-            "endline": 402
-        }, {
-            "title": "jQuery.each()",
-            "level": "h3",
-            "startline": 354,
-            "endline": 402
+            "style": "h3",
+            "line": 354
         }, {
             "title": "jQuery.trim()",
-            "level": "h3",
-            "startline": 404,
-            "endline": 417
+            "style": "h3",
+            "line": 404
         }, {
             "title": "jQuery.makeArray()",
-            "level": "h3",
-            "startline": 419,
-            "endline": 435
+            "style": "h3",
+            "line": 419
         }, {
             "title": "jQuery.inArray()",
-            "level": "h3",
-            "startline": 437,
-            "endline": 457
+            "style": "h3",
+            "line": 437
         }, {
             "title": "jQuery.merge()",
-            "level": "h3",
-            "startline": 459,
-            "endline": 479
+            "style": "h3",
+            "line": 459
         }, {
             "title": "jQuery.grep()",
-            "level": "h3",
-            "startline": 481,
-            "endline": 498
+            "style": "h3",
+            "line": 481
         }, {
             "title": "jQuery.map()",
-            "level": "h3",
-            "startline": 500,
-            "endline": 531
+            "style": "h3",
+            "line": 500
         }, {
-            "title": "jQuery.map()",
-            "level": "h3",
-            "startline": 500,
-            "endline": 531
+            "title": "jQuery.proxy()",
+            "style": "h3",
+            "line": 536
+        }, {
+            "title": "jQuery.now()",
+            "style": "h3",
+            "line": 565
+        },
+
+
+        {
+            "title": "Module: Selector",
+            "style": "h1",
+            "line": 594
+        },
+
+        {
+            "title": "Sub module: Sizzle",
+            "style": "h2",
+            "line": 594
+        }, {
+            "title": "Sizzle variables",
+            "style": "h4",
+            "line": 607
+        }, {
+            "title": "Sizzle constructor",
+            "style": "h5",
+            "line": 774
         },
 
 
@@ -188,11 +171,9 @@
 
 
         {
-            "blockId": "block_200",
             "title": "init()",
-            "level": "h5",
-            "startline": 2727,
-            "endline": 2830
+            "style": "h5",
+            "line": 2727
         }
     ]
 }

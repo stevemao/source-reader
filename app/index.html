@@ -41,6 +41,7 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div id="rightBar">
+        <input type="text" id="filter" placeholder="filter">
         <div id="menu">
             <ul class="nav nav-tabs nav-stacked">
                 
@@ -52,8 +53,8 @@
         <div class="header">
             <h3 class="text-muted">Source reader</h3>
             <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                Choose source code <span class="caret"></span>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id='select-script'>
+                Choose source code
                 </button>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="#" data-source='jQuery-1.11.0'>jQuery 1.11.0</a></li>
