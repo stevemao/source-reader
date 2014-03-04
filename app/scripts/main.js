@@ -6,6 +6,7 @@ $('a[data-source="jQuery-1.11.0"]').click(function() {
 
 function selectAndBrushCode(source) {
     $('.content').html('LOADING...');
+    $('#menu ul').html('');
     var blocks;
     $.when(
         $.ajax({
@@ -19,12 +20,15 @@ function selectAndBrushCode(source) {
                 blocks = sourceHelpers.blocks;
             }
         })
-    ).
-    then(function() {
-        blocks.forEach(function(block) {
-            setCodeBlock(block.startline, block.endline, block.collapseFrom, block.collapseTo, block.title, block.collapseId);
+    )
+        .then(function() {
+            blocks.forEach(function(block) {
+                setCodeBlock(block);
+            });
+            $('body').scrollspy({
+                target: '#menu'
+            });
         });
-    });
 }
 
 function brushCode(rawCode) {
@@ -40,13 +44,46 @@ function htmlEncode(value) {
     return $('<div/>').text(value).html();
 }
 
-function setCodeBlock(startline, endline, collapseFrom, collapseTo, title, collapseId) {
+function setCodeBlock(block) {
     //handle collapse
-    $('.code .line.number' + collapseFrom).before('<h1><a data-toggle="collapse" data-target=".' + collapseId + '" href="#">' + title + '</a></h1>')
-        .nextUntil('.code .line.number' + collapseTo).andSelf().wrapAll('<div class="panel - collapse collapse ' + collapseId + '"></div>');
-    $('.gutter .line.number' + collapseFrom).before('<h1><a data-toggle="collapse" data-target=".' + collapseId + '" href="#">-</a></h1>')
-        .nextUntil('.gutter .line.number' + collapseTo).andSelf().wrapAll('<div class="panel-collapse collapse ' + collapseId + '"></div>');
-    $('.' + collapseId).collapse();
+
+    var $title = $('<a></a>', {
+        'data-toggle': 'collapse',
+        'data-target': '.' + block.blockId,
+        'href': 'javascript:void(0)',
+        'id': block.blockId,
+        on: {
+            click: function() {
+                if ($('#toggle_' + block.blockId).children().html() === '+') {
+                    $('#toggle_' + block.blockId).children().html('-');
+                } else if ($('#toggle_' + block.blockId).children().html() === '-') {
+                    $('#toggle_' + block.blockId).children().html('+');
+                }
+                $('body').scrollspy('refresh');
+            }
+        }
+    }).append('<' + block.level + '>' + block.title + '</' + block.level + '>');
+
+    var $toggle = $title.clone().attr('id', 'toggle_' + block.blockId);
+
+
+    var $wrapper = $('<div></div>').addClass('panel-collapse collapse ' + block.blockId);
+
+    if (block.endline) {
+        $toggle.children().html('-');
+        $('.code .line.number' + block.startline).before($title)
+            .nextUntil('.code .line.number' + (block.endline + 1)).andSelf().wrapAll($wrapper);
+        $('.gutter .line.number' + block.startline).before($toggle)
+            .nextUntil('.gutter .line.number' + (block.endline + 1)).andSelf().wrapAll($wrapper);
+        $('.' + block.blockId).collapse();
+    } else {
+        $toggle.children().html('*');
+        $('.code .line.number' + block.startline).before($title);
+        $('.gutter .line.number' + block.startline).before($toggle);
+    }
+
+    //setup menu
+    $('#menu ul').append('<li><a href="#' + block.blockId + '"><' + block.level + '>' + block.title + '</' + block.level + '></a></li>');
 
     //handle color
     //$('.gutter .line.number' + startline).nextUntil('.gutter .line.number' + endline).andSelf().css('background', 'red');

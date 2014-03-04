@@ -1,22 +1,103 @@
 {
     "blocks": [{
-        "collapseId": "collapse_1",
-        "title": "Object: jQuery",
-        "level": "h1",
-        "startline": 1,
-        "endline": 10338,
-        "collapseFrom": 1,
-        "collapseTo": 13
-    }],
+            "blockId": "block_1",
+            "title": "Module: Core",
+            "level": "h1",
+            "startline": 16
+        }, {
+            "blockId": "block_3",
+            "title": "Variables",
+            "level": "h4",
+            "startline": 46,
+            "endline": 89
+        }, {
+            "blockId": "block_4",
+            "title": "Function: toArray()",
+            "level": "h5",
+            "startline": 102,
+            "endline": 104
+        }, {
+            "blockId": "block_5",
+            "title": "Function: get()",
+            "level": "h5",
+            "startline": 106,
+            "endline": 116
+        }, {
+            "blockId": "block_6",
+            "title": "Function: pushStack()",
+            "level": "h5",
+            "startline": 118,
+            "endline": 131
+        }, {
+            "blockId": "block_7",
+            "title": "Function: each()",
+            "level": "h5",
+            "startline": 133,
+            "endline": 138
+        }, {
+            "blockId": "block_8",
+            "title": "Function: map()",
+            "level": "h5",
+            "startline": 140,
+            "endline": 144
+        }, {
+            "blockId": "block_9",
+            "title": "Function: slice()",
+            "level": "h5",
+            "startline": 146,
+            "endline": 148
+        }, {
+            "blockId": "block_10",
+            "title": "Function: first()",
+            "level": "h5",
+            "startline": 150,
+            "endline": 152
+        }, {
+            "blockId": "block_11",
+            "title": "Function: last()",
+            "level": "h5",
+            "startline": 154,
+            "endline": 156
+        }, {
+            "blockId": "block_12",
+            "title": "Function: eq()",
+            "level": "h5",
+            "startline": 158,
+            "endline": 162
+        }, {
+            "blockId": "block_13",
+            "title": "Function: end()",
+            "level": "h5",
+            "startline": 164,
+            "endline": 166
+        }, {
+            "blockId": "block_14",
+            "title": "Internal functions",
+            "level": "h4",
+            "startline": 168,
+            "endline": 172
+        }, {
+            "blockId": "block_15",
+            "title": "jQuery.extend()",
+            "level": "h3",
+            "startline": 175,
+            "endline": 238
+        },
 
 
 
 
 
-    "extraInfo": [{
-        "startline": 1,
-        "endline": 1,
-        "info": "info"
-    }]
 
+
+
+
+        {
+            "blockId": "block_200",
+            "title": "Function: init()",
+            "level": "h5",
+            "startline": 2727,
+            "endline": 2830
+        }
+    ]
 }
