@@ -209,27 +209,116 @@
             "style": "h5",
             "line": 1044
         }, {
-            "title": "Sizzle.setDocument()",
-            "style": "h5",
-            "line": 1044
-        }, {
             "title": "Sizzle.matches()",
             "style": "h5",
             "line": 1408
-        },
-
-
-
-
-
-
-
-
-
-        {
-            "title": "init()",
+        }, {
+            "title": "Sizzle.contains()",
+            "style": "h5",
+            "line": 1441
+        }, {
+            "title": "Sizzle.attr()",
+            "style": "h5",
+            "line": 1449
+        }, {
+            "title": "Sizzle.error()",
+            "style": "h5",
+            "line": 1470
+        }, {
+            "title": "Sizzle.uniqueSort()",
+            "style": "h5",
+            "line": 1474
+        }, {
+            "title": "Sizzle.getText()",
+            "style": "h5",
+            "line": 1507
+        }, {
+            "title": "Sizzle.selectors()",
+            "style": "h5",
+            "line": 1542
+        }, {
+            "title": "tokenize()",
+            "style": "h5",
+            "line": 2023
+        }, {
+            "title": "toSelector()",
+            "style": "h5",
+            "line": 2090
+        }, {
+            "title": "addCombinator()",
+            "style": "h5",
+            "line": 2100
+        }, {
+            "title": "elementMatcher()",
+            "style": "h5",
+            "line": 2153
+        }, {
+            "title": "condense()",
+            "style": "h5",
+            "line": 2167
+        }, {
+            "title": "setMatcher()",
+            "style": "h5",
+            "line": 2188
+        }, {
+            "title": "matcherFromTokens()",
+            "style": "h5",
+            "line": 2281
+        }, {
+            "title": "matcherFromGroupMatchers()",
+            "style": "h5",
+            "line": 2336
+        }, {
+            "title": "Sizzle.compile()",
+            "style": "h5",
+            "line": 2435
+        }, {
+            "title": "multipleContexts()",
+            "style": "h5",
+            "line": 2462
+        }, {
+            "title": "select()",
+            "style": "h5",
+            "line": 2471
+        }, {
+            "title": "Module: findFilter",
+            "style": "h1",
+            "line": 2620
+        }, {
+            "title": "jQuery.filter()",
+            "style": "h3",
+            "line": 2652
+        }, {
+            "title": "jQuery.fn.find()",
+            "style": "h5",
+            "line": 2667
+        }, {
+            "title": "jQuery.fn.filter()",
+            "style": "h5",
+            "line": 2692
+        }, {
+            "title": "jQuery.fn.not()",
+            "style": "h5",
+            "line": 2695
+        }, {
+            "title": "jQuery.fn.is()",
+            "style": "h5",
+            "line": 2698
+        }, {
+            "title": "Module: Core/init",
+            "style": "h1",
+            "line": 2713
+        }, {
+            "title": "jQuery.fn.init()",
             "style": "h5",
             "line": 2727
+        }, {
+            "title": "Module: traversing",
+            "style": "h1",
+            "line": 2839
         }
+
+
+
     ]
 }
