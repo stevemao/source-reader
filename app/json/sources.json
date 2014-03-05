@@ -1,11 +1,27 @@
-{
-    "sources": [{
-        "name": "jQuery",
-        "version": "1.11.0",
-        "file": "jQuery-1.11.0.js",
-    }, {
-        "name": "jQuery",
-        "version": "1.10.2",
-        "file": "jQuery-1.10.2.js"
-    }]
-}
+[{
+        "category": "jQuery-1",
+        "sourcesFiles": [{
+            "name": "jQuery",
+            "file": "jQuery-1.11.0",
+            "version": "1.11.0"
+        }, {
+            "name": "jQuery",
+            "file": "jQuery-1.10.2",
+            "version": "1.10.2"
+        }, {
+            "name": "jQuery",
+            "file": "jQuery-1.10.1",
+            "version": "1.10.1"
+        }]
+    },
+
+    {
+        "category": "jQuery-2",
+        "sourcesFiles": [{
+            "name": "jQuery",
+            "file": "jQuery-2.1.0",
+            "version": "2.1.0"
+        }]
+    }
+
+]

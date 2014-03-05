@@ -98,7 +98,7 @@
         }, {
             "title": "jQuery.camelCase()",
             "style": "h3",
-            "line": 346
+            "line": 344
         }, {
             "title": "jQuery.nodeName()",
             "style": "h3",
@@ -160,6 +160,62 @@
             "title": "Sizzle constructor",
             "style": "h5",
             "line": 774
+        }, {
+            "title": "createCache()",
+            "style": "h5",
+            "line": 883
+        }, {
+            "title": "markFunction()",
+            "style": "h5",
+            "line": 903
+        }, {
+            "title": "assert()",
+            "style": "h5",
+            "line": 912
+        }, {
+            "title": "addHandle()",
+            "style": "h5",
+            "line": 933
+        }, {
+            "title": "siblingCheck()",
+            "style": "h5",
+            "line": 947
+        }, {
+            "title": "createInputPseudo()",
+            "style": "h5",
+            "line": 976
+        }, {
+            "title": "createButtonPseudo()",
+            "style": "h5",
+            "line": 987
+        }, {
+            "title": "createPositionalPseudo()",
+            "style": "h5",
+            "line": 998
+        }, {
+            "title": "testContext()",
+            "style": "h5",
+            "line": 1020
+        }, {
+            "title": "Sizzle.support()",
+            "style": "h5",
+            "line": 1029
+        }, {
+            "title": "Sizzle.isXML()",
+            "style": "h5",
+            "line": 1032
+        }, {
+            "title": "Sizzle.setDocument()",
+            "style": "h5",
+            "line": 1044
+        }, {
+            "title": "Sizzle.setDocument()",
+            "style": "h5",
+            "line": 1044
+        }, {
+            "title": "Sizzle.matches()",
+            "style": "h5",
+            "line": 1408
         },
 
 

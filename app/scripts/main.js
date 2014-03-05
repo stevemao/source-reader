@@ -1,15 +1,36 @@
 'use strict';
+
+//test loading time
 var time = 0;
-$('a[data-source="jQuery-1.11.0"]').click(function() {
-    selectAndBrushCode('jquery-1.11.0');
-    time = Date.now();
+
+
+$.ajax({
+    url: 'json/sources.json',
+    success: function(sources) {
+        sources.forEach(function(source) {
+            source.sourcesFiles.forEach(function(sourcefile) {
+                var $source = $('<li></li>')
+                    .append($('<a href="#"></a>')
+                        .html(sourcefile.name + ' ' + sourcefile.version)
+                        .attr('data-source', sourcefile.file));
+                $('#select-script').next().append($source);
+            });
+
+            $('#select-script').next().append('<li class="divider"></li>');
+        });
+
+        $('ul li a[data-source]').click(function(event) {
+            selectAndBrushCode($(event.currentTarget).attr('data-source'));
+            time = Date.now();
+        });
+
+    }
 });
 
-$('#filter').keyup(function(event) {
+$('#filter').keyup(function() {
     var value = this.value;
-    var $li = $('#menu li');
-    $('#menu li').css('display', 'block').filter(function(index) {
-        if ($(this).children().html().toUpperCase().indexOf(value.toUpperCase()) != -1) {
+    $('#menu li').css('display', 'block').filter(function() {
+        if ($(this).children().html().toUpperCase().indexOf(value.toUpperCase()) !== -1) {
             return false;
         }
         return true;
@@ -61,7 +82,8 @@ function htmlEncode(value) {
 
 function setCodeBlock(block) {
     //remove special charactor
-    var id = block.title.replace(/[^a-zA-Z0-9_]/g, '');
+    var id = block.title.replace(/[^a-zA-Z0-9_]/g, '-');
+    id = $.camelCase(id).replace(/-/g, '');
     var $title = $('<a></a>', {
         'href': '#' + id,
         'id': id,
