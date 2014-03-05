@@ -7,6 +7,7 @@ var time = 0;
 $.ajax({
     url: 'json/sources.json',
     success: function(sources) {
+        var $selectSourceButton = $('#select-script');
         sources.forEach(function(source) {
             source.sourcesFiles.forEach(function(sourcefile) {
                 var $source = $('<li></li>')
@@ -16,11 +17,13 @@ $.ajax({
                 $('#select-script').next().append($source);
             });
 
-            $('#select-script').next().append('<li class="divider"></li>');
+            $selectSourceButton.next().append('<li class="divider"></li>');
         });
 
         $('ul li a[data-source]').click(function(event) {
-            selectAndBrushCode($(event.currentTarget).attr('data-source'));
+            var $currentTarget = $(event.currentTarget);
+            selectAndBrushCode($currentTarget.attr('data-source'));
+            $selectSourceButton.html($currentTarget.html());
             time = Date.now();
         });
 
