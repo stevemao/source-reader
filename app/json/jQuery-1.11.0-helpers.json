@@ -1,12 +1,67 @@
 {
     "blocks": [{
-            "title": "Module: Core",
-            "style": "h1",
-            "line": 15
-        }, {
-            "title": "Internal variables",
+            "title": "var/deletedIds",
             "style": "h4",
             "line": 46
+        }, {
+            "title": "var/slice",
+            "style": "h4",
+            "line": 48,
+            "dependencies": ["var/deletedIds"]
+        }, {
+            "title": "var/concat",
+            "style": "h4",
+            "line": 50,
+            "dependencies": ["var/deletedIds"]
+        }, {
+            "title": "var/push",
+            "style": "h4",
+            "line": 52,
+            "dependencies": ["var/deletedIds"]
+        }, {
+            "title": "var/indexOf",
+            "style": "h4",
+            "line": 54,
+            "dependencies": ["var/deletedIds"]
+        }, {
+            "title": "var/class2type",
+            "style": "h4",
+            "line": 56
+        }, {
+            "title": "var/toString",
+            "style": "h4",
+            "line": 58,
+            "dependencies": ["var/class2type"]
+        }, {
+            "title": "var/hasOwn",
+            "style": "h4",
+            "line": 60,
+            "dependencies": ["var/class2type"]
+        }, {
+            "title": "var/trim",
+            "style": "h4",
+            "line": 62
+        }, {
+            "title": "var/support",
+            "style": "h4",
+            "line": 64
+        }, {
+            "title": "Module: core",
+            "style": "h1",
+            "line": 68,
+            "dependencies": [
+                "var/class2type",
+                "var/deletedIds",
+                "var/slice",
+                "var/concat",
+                "var/push",
+                "var/indexOf",
+                "var/class2type",
+                "var/toString",
+                "var/hasOwn",
+                "var/trim",
+                "var/support"
+            ]
         }, {
             "title": "jQuery.fn.toArray()",
             "style": "h5",
@@ -316,8 +371,255 @@
             "title": "Module: traversing",
             "style": "h1",
             "line": 2839
+        }, {
+            "title": "jQuery.dir()",
+            "style": "h3",
+            "line": 2849
+        }, {
+            "title": "jQuery.sibling()",
+            "style": "h3",
+            "line": 2862
+        }, {
+            "title": "jQuery.fn.has()",
+            "style": "h5",
+            "line": 2876
+        }, {
+            "title": "jQuery.fn.closest()",
+            "style": "h5",
+            "line": 2890
+        }, {
+            "title": "jQuery.fn.index()",
+            "style": "h5",
+            "line": 2918
+        }, {
+            "title": "jQuery.fn.add()",
+            "style": "h5",
+            "line": 2938
+        }, {
+            "title": "jQuery.fn.addBack()",
+            "style": "h5",
+            "line": 2946
+        }, {
+            "title": "jQuery.fn.parent()",
+            "style": "h5",
+            "line": 2962
+        }, {
+            "title": "jQuery.fn.parents()",
+            "style": "h5",
+            "line": 2966
+        }, {
+            "title": "jQuery.fn.parentsUntil()",
+            "style": "h5",
+            "line": 2969
+        }, {
+            "title": "jQuery.fn.next()",
+            "style": "h5",
+            "line": 2972
+        }, {
+            "title": "jQuery.fn.prev()",
+            "style": "h5",
+            "line": 2975
+        }, {
+            "title": "jQuery.fn.nextAll()",
+            "style": "h5",
+            "line": 2978
+        }, {
+            "title": "jQuery.fn.prevAll()",
+            "style": "h5",
+            "line": 2981
+        }, {
+            "title": "jQuery.fn.nextUntil()",
+            "style": "h5",
+            "line": 2984
+        }, {
+            "title": "jQuery.fn.prevUntil()",
+            "style": "h5",
+            "line": 2987
+        }, {
+            "title": "jQuery.fn.siblings()",
+            "style": "h5",
+            "line": 2990
+        }, {
+            "title": "jQuery.fn.children()",
+            "style": "h5",
+            "line": 2993
+        }, {
+            "title": "jQuery.fn.contents()",
+            "style": "h5",
+            "line": 2996
+        }, {
+            "title": "Module: Callbacks",
+            "style": "h1",
+            "line": 3032
+        }, {
+            "title": "jQuery.Callbacks()",
+            "style": "h3",
+            "line": 3044
+        }, {
+            "title": "callbacks.add()",
+            "style": "h5",
+            "line": 3119
+        }, {
+            "title": "callbacks.remove()",
+            "style": "h5",
+            "line": 3150
+        }, {
+            "title": "callbacks.has()",
+            "style": "h5",
+            "line": 3171
+        }, {
+            "title": "callbacks.empty()",
+            "style": "h5",
+            "line": 3182
+        }, {
+            "title": "callbacks.disable()",
+            "style": "h5",
+            "line": 3182
+        }, {
+            "title": "callbacks.disabled()",
+            "style": "h5",
+            "line": 3187
+        }, {
+            "title": "callbacks.lock()",
+            "style": "h5",
+            "line": 3191
+        }, {
+            "title": "callbacks.locked()",
+            "style": "h5",
+            "line": 3199
+        }, {
+            "title": "callbacks.fireWith()",
+            "style": "h5",
+            "line": 3203
+        }, {
+            "title": "callbacks.fire()",
+            "style": "h5",
+            "line": 3216
+        }, {
+            "title": "callbacks.fired()",
+            "style": "h5",
+            "line": 3221
+        }, {
+            "title": "Module: Defferred",
+            "style": "h1",
+            "line": 3231
+        }, {
+            "title": "jQuery.Deferred()",
+            "style": "h3",
+            "line": 3233
+        }, {
+            "title": "deferred.state()",
+            "style": "h5",
+            "line": 3242
+        }, {
+            "title": "deferred.always()",
+            "style": "h5",
+            "line": 3245
+        }, {
+            "title": "deferred.then()",
+            "style": "h5",
+            "line": 3249
+        }, {
+            "title": "deferred.promise()",
+            "style": "h5",
+            "line": 3270
+        }, {
+            "title": "jQuery.when()",
+            "style": "h3",
+            "line": 3319
+        }, {
+            "title": "Module: Core/ready",
+            "style": "h1",
+            "line": 3374
+        }, {
+            "title": "jQuery.fn.ready()",
+            "style": "h5",
+            "line": 3377
+        }, {
+            "title": "jQuery.ready()",
+            "style": "h3",
+            "line": 3401
+        }, {
+            "title": "jQuery.ready.promise()",
+            "style": "h3",
+            "line": 3457
+        }, {
+            "title": "Module: Support",
+            "style": "h1",
+            "line": 3523
+        }, {
+            "title": "Module: Data",
+            "style": "h1",
+            "line": 3613
+        }, {
+            "title": "jQuery.hasData()",
+            "style": "h3",
+            "line": 3855
+        }, {
+            "title": "jQuery.data()",
+            "style": "h3",
+            "line": 3860
+        }, {
+            "title": "jQuery.removeData()",
+            "style": "h3",
+            "line": 3860
+        }, {
+            "title": "jQuery._data()",
+            "style": "h3",
+            "line": 3869
+        }, {
+            "title": "jQuery._removeData()",
+            "style": "h3",
+            "line": 3873
+        }, {
+            "title": "jQuery.fn.data()",
+            "style": "h5",
+            "line": 3879
+        }, {
+            "title": "jQuery.fn.removeData()",
+            "style": "h5",
+            "line": 3929
+        }, {
+            "title": "Module: Queue",
+            "style": "h1",
+            "line": 3937
+        }, {
+            "title": "jQuery.queue()",
+            "style": "h3",
+            "line": 3938
+        }, {
+            "title": "jQuery.dequeue()",
+            "style": "h3",
+            "line": 3957
+        }, {
+            "title": "jQuery._queueHooks()",
+            "style": "h3",
+            "line": 3992
+        }, {
+            "title": "jQuery.fn.queue()",
+            "style": "h5",
+            "line": 4005
+        }, {
+            "title": "jQuery.fn.dequeue()",
+            "style": "h5",
+            "line": 4031
+        }, {
+            "title": "jQuery.fn.clearQueue()",
+            "style": "h5",
+            "line": 4036
+        }, {
+            "title": "jQuery.fn.promise()",
+            "style": "h5",
+            "line": 4039
+        }, {
+            "title": "Module: Core/Access",
+            "style": "h3",
+            "line": 4083
+        }, {
+            "title": "jQuery.access()",
+            "style": "h3",
+            "line": 4083
         }
-
 
 
     ]
