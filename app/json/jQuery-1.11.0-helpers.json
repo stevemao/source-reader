@@ -194,18 +194,9 @@
             "title": "jQuery.now()",
             "style": "h3",
             "line": 565
-        },
-
-
-        {
-            "title": "Module: Selector",
+        }, {
+            "title": "Module: sizzle",
             "style": "h1",
-            "line": 594
-        },
-
-        {
-            "title": "Sub module: Sizzle",
-            "style": "h2",
             "line": 594
         }, {
             "title": "Sizzle variables",
@@ -336,9 +327,29 @@
             "style": "h5",
             "line": 2471
         }, {
-            "title": "Module: findFilter",
+            "title": "Module: selector-sizzle",
             "style": "h1",
-            "line": 2620
+            "line": 2604,
+            "dependencies": ["Module: core", "Module: sizzle"]
+        }, {
+            "title": "Module: selector",
+            "style": "h1",
+            "line": 2612,
+            "dependencies": ["Module: selector-sizzle"]
+        }, {
+            "title": "traversing/var/rneedsContext",
+            "style": "h3",
+            "line": 2614,
+            "dependencies": ["Module: core", "Module: selector"]
+        }, {
+            "title": "core/var/rsingleTag",
+            "style": "h3",
+            "line": 2616
+        }, {
+            "title": "Module: traversing/findFilter",
+            "style": "h1",
+            "line": 2620,
+            "dependencies": ["Module: core", "var/indexOf", "traversing/var/rneedsContext", "Module: selector"]
         }, {
             "title": "jQuery.filter()",
             "style": "h3",
@@ -362,7 +373,8 @@
         }, {
             "title": "Module: Core/init",
             "style": "h1",
-            "line": 2713
+            "line": 2713,
+            "dependencies": ["Module: core", "var/rsingleTag", "traversing/findFilter"]
         }, {
             "title": "jQuery.fn.init()",
             "style": "h5",
@@ -370,7 +382,8 @@
         }, {
             "title": "Module: traversing",
             "style": "h1",
-            "line": 2839
+            "line": 2839,
+            "dependencies": ["Module: core", "traversing/var/rneedsContext", "Module: core/init", "Module: traversing/findFilter", "Module: selector"]
         }, {
             "title": "jQuery.dir()",
             "style": "h3",
@@ -448,9 +461,14 @@
             "style": "h5",
             "line": 2996
         }, {
+            "title": "var/rnotwhite",
+            "style": "h3",
+            "line": 3028
+        }, {
             "title": "Module: Callbacks",
             "style": "h1",
-            "line": 3032
+            "line": 3032,
+            "dependencies": ["core", "var/rnotwhite"]
         }, {
             "title": "jQuery.Callbacks()",
             "style": "h3",
@@ -502,7 +520,8 @@
         }, {
             "title": "Module: Defferred",
             "style": "h1",
-            "line": 3231
+            "line": 3231,
+            "dependencies": ["core", "var/slice", "Module: callbacks"]
         }, {
             "title": "jQuery.Deferred()",
             "style": "h3",
@@ -530,7 +549,8 @@
         }, {
             "title": "Module: Core/ready",
             "style": "h1",
-            "line": 3374
+            "line": 3374,
+            "dependencies": ["Module: core", "Module: core/init", "Module: deferred"]
         }, {
             "title": "jQuery.fn.ready()",
             "style": "h5",
@@ -544,13 +564,33 @@
             "style": "h3",
             "line": 3457
         }, {
+            "title": "var/strundefined",
+            "style": "h4",
+            "line": 3519
+        }, {
+            "title": "var/support",
+            "style": "h4",
+            "line": 3521
+        }, {
             "title": "Module: Support",
             "style": "h1",
-            "line": 3523
+            "line": 3523,
+            "dependencies": ["Module: core", "var/strundefined", "var/support", "Module: core/init", "Module: core/ready"]
+        }, {
+            "title": "data/support",
+            "style": "h3",
+            "line": 3578,
+            "dependencies": ["var/support"]
+        }, {
+            "title": "data/accepts",
+            "style": "h3",
+            "line": 3597,
+            "dependencies": ["Module: core"]
         }, {
             "title": "Module: Data",
             "style": "h1",
-            "line": 3613
+            "line": 3613,
+            "dependencies": ["Module: core", "var/deletedIds", "data/support", "data/accepts"]
         }, {
             "title": "jQuery.hasData()",
             "style": "h3",
@@ -582,7 +622,8 @@
         }, {
             "title": "Module: Queue",
             "style": "h1",
-            "line": 3937
+            "line": 3937,
+            "dependencies": ["Module: core", "Module: deferred", "Module: callbacks"]
         }, {
             "title": "jQuery.queue()",
             "style": "h3",
@@ -612,9 +653,28 @@
             "style": "h5",
             "line": 4039
         }, {
+            "title": "var/pnum",
+            "style": "h4",
+            "line": 4070
+        }, {
+            "title": "css/var/cssExpand",
+            "style": "h4",
+            "line": 4072
+        }, {
+            "title": "css/var/isHidden",
+            "style": "h4",
+            "line": 4074,
+            "dependencies": ["Module: core", "Module: selector"]
+        }, {
+            "title": "css/var/isHidden",
+            "style": "h4",
+            "line": 4074,
+            "dependencies": []
+        }, {
             "title": "Module: Core/Access",
-            "style": "h3",
-            "line": 4083
+            "style": "h1",
+            "line": 4083,
+            "dependencies": ["Module: core"]
         }, {
             "title": "jQuery.access()",
             "style": "h3",

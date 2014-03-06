@@ -61,6 +61,7 @@ function selectAndBrushCode(source) {
             $('#rightBar').css('display', 'block');
             blocks.forEach(function(block) {
                 setCodeBlock(block);
+                setBlockNote(block);
             });
             $('body').scrollspy({
                 target: '#menu'
@@ -72,7 +73,8 @@ function selectAndBrushCode(source) {
 
 function brushCode(rawCode) {
     var encodedCode = htmlEncode(rawCode);
-    $('.content').html('<pre class="brush:js">' + encodedCode + '</pre>');
+    $('.content').html('<div id="source"><pre class="brush:js">' + encodedCode + '</pre></div>');
+    $('.content').append('<div id="blockNote"></div>');
     SyntaxHighlighter.defaults['quick-code'] = false;
     SyntaxHighlighter.highlight();
 }
@@ -85,8 +87,7 @@ function htmlEncode(value) {
 
 function setCodeBlock(block) {
     //remove special charactor
-    var id = block.title.replace(/[^a-zA-Z0-9_]/g, '-');
-    id = $.camelCase(id).replace(/-/g, '');
+    var id = toCamelCase(block.title);
     var $title = $('<a></a>', {
         'href': '#' + id,
         'id': id,
@@ -100,4 +101,30 @@ function setCodeBlock(block) {
 
     //setup menu
     $('#menu ul').append('<li><a href="#' + id + '"><' + block.style + '>' + block.title + '</' + block.style + '></a></li>');
+}
+
+function toCamelCase(string) {
+    var newString = string.replace(/[^a-zA-Z0-9_]/g, '-');
+    newString = $.camelCase(newString).replace(/-/g, '');
+    return newString;
+}
+
+function setBlockNote(block) {
+    if (block.dependencies) {
+
+        var $blockNote = $('<div class="note"></div>')
+            .css('top', $('.code .line.number' + block.line).offset().top)
+            .html('Dependencies:');
+        block.dependencies.forEach(function(dependency) {
+            var $link = $('<a></a>')
+                .attr('href', '#' + toCamelCase(dependency))
+                .append(dependency);
+            var $dependency = $('<div></div>')
+                .append($link);
+
+            $blockNote.append($dependency);
+        });
+
+        $('#blockNote').append($blockNote);
+    }
 }

@@ -21,17 +21,15 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Custom page header */
 .header {
-    
     /* Make the masthead heading the same height as the navigation */
     h3 {
         margin: 0 auto;
-        display:block;
-        width:200px;
+        display: block;
+        width: 200px;
         text-align: center;
         line-height: 40px;
         padding-bottom: 19px;
     }
-    
 }
 
 .content, #menu {
@@ -40,15 +38,15 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
             font-family: arial !important;
         }
         h1 {
-            font-size:24px;
+            font-size: 24px;
             color: #57BE85;
         }
         h2 {
-            font-size:22px;
+            font-size: 22px;
             color: #D87575;
         }
         h3 {
-            font-size:20px;
+            font-size: 20px;
             color: #7BCED7;
         }
         h4 {
@@ -58,22 +56,36 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
             color: #FF9900;
         }
     }
+    #source {
+        width: 70%;
+        float: left;
+    }
+    #blockNote {
+        width: 15%;
+        float: left;
+        .note {
+            position: absolute;
+            background:lightgray;
+            padding:10px 10px;
+            border-radius: 5px;
+        }
+    }
 }
 
 #rightBar {
-    #filter{
+    #filter {
         margin-left: 10px;
         margin-right: auto;
         margin-bottom: 8px;
     }
-    display:none;
+    display: none;
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 10px;
     z-index: 100;
-    width:20%;
-    height:calc(100% - 40px);
-    overflow:auto;
+    width: 15%;
+    height: calc(100% - 40px);
+    overflow: auto;
 }
 
 #menu {
@@ -86,27 +98,33 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     a {
         padding: 0;
         h1, h2, h3, h4, h5 {
-            font-size:16px;
+            font-size: 16px;
             margin: 0;
         }
-        h1{
-            padding:5px;
-            border-top:1px solid #dddddd;
+        h1 {
+            padding: 5px;
+            border-top: 1px solid #dddddd;
         }
-        h2{
+        h2 {
             text-indent: 0.75em;
         }
-        h3,h4,h5{
+        h3,h4,h5 {
             text-indent: 1.5em;
         }
     }
-    ul{
-        border:none;
+    ul {
+        border: none;
     }
 }
 
 /* Custom page footer */
 .footer {
+    position: fixed;
+    p {
+        margin: 0;
+    }
+    bottom: 0px;
+    right: 10px;
     padding-top: 19px;
     color: #777;
 }
