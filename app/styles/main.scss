@@ -57,15 +57,15 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
         }
     }
     #source {
-        width: 70%;
+        width: 60%;
         float: left;
     }
     #blockNote {
         width: 15%;
         float: left;
-        .note {
+        .bg-info {
             position: absolute;
-            background:lightgray;
+            background-color: #d9edf7;
             padding:10px 10px;
             border-radius: 5px;
         }
@@ -73,19 +73,24 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 }
 
 #rightBar {
+    padding:10px;
     #filter {
         margin-left: 10px;
         margin-right: auto;
         margin-bottom: 8px;
+        display:inline;
+        width:200px;
     }
+    border-radius:10px;
+    background-color: lighten(#fcf8e3, 3%);
     display: none;
     position: fixed;
     top: 20px;
     right: 10px;
     z-index: 100;
-    width: 15%;
     height: calc(100% - 40px);
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x:hidden;
 }
 
 #menu {
@@ -104,9 +109,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
         h1 {
             padding: 5px;
             border-top: 1px solid #dddddd;
-        }
-        h2 {
-            text-indent: 0.75em;
         }
         h3,h4,h5 {
             text-indent: 1.5em;

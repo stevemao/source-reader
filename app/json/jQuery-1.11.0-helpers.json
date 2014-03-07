@@ -63,6 +63,10 @@
                 "var/support"
             ]
         }, {
+            "title": "jQuery()",
+            "style": "h3",
+            "line": 71
+        }, {
             "title": "jQuery.fn.toArray()",
             "style": "h5",
             "line": 102
@@ -194,6 +198,14 @@
             "title": "jQuery.now()",
             "style": "h3",
             "line": 565
+        }, {
+            "title": "Internal: Populate the class2type map",
+            "style": "h2",
+            "line": 574
+        }, {
+            "title": "Internal function: isArraylike()",
+            "style": "h2",
+            "line": 579
         }, {
             "title": "Module: sizzle",
             "style": "h1",

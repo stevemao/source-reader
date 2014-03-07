@@ -40,6 +40,12 @@ $('#filter').keyup(function() {
     }).css('display', 'none');
 });
 
+$('.clear').click(function(event) {
+    var clearTarget = $(event.currentTarget).attr('for');
+    $('#' + clearTarget).val('');
+    $('#' + clearTarget).trigger('keyup');
+});
+
 function selectAndBrushCode(source) {
     $('.content').html('<pre>LOADING...</pre>');
     $('#menu ul').html('');
@@ -73,7 +79,7 @@ function selectAndBrushCode(source) {
 
 function brushCode(rawCode) {
     var encodedCode = htmlEncode(rawCode);
-    $('.content').html('<div id="source"><pre class="brush:js">' + encodedCode + '</pre></div>');
+    $('.content').html('<div id="source"><pre class="brush:js; toolbar: false;">' + encodedCode + '</pre></div>');
     $('.content').append('<div id="blockNote"></div>');
     SyntaxHighlighter.defaults['quick-code'] = false;
     SyntaxHighlighter.highlight();
@@ -112,7 +118,7 @@ function toCamelCase(string) {
 function setBlockNote(block) {
     if (block.dependencies) {
 
-        var $blockNote = $('<div class="note"></div>')
+        var $blockNote = $('<div class="bg-info"></div>')
             .css('top', $('.code .line.number' + block.line).offset().top)
             .html('Dependencies:');
         block.dependencies.forEach(function(dependency) {
