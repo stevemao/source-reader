@@ -32,6 +32,14 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     }
 }
 
+.fork{
+    float:right;
+    background:url('../images/fork.png') no-repeat;
+    width:200px;
+    height:200px;
+    background-size:200px 200px;
+}
+
 .content, #menu {
     a {
         h1, h2, h3, h4, h5 {
