@@ -1,8 +1,8 @@
 'use strict';
 
 //test loading time
-var time = 0;
-
+var time = 0,
+    apiPrefix = '';
 
 $.ajax({
     url: 'json/sources.json',
@@ -30,22 +30,6 @@ $.ajax({
     }
 });
 
-$('#filter').keyup(function() {
-    var value = this.value;
-    $('#menu li').css('display', 'block').filter(function() {
-        if ($(this).children().html().toUpperCase().indexOf(value.toUpperCase()) !== -1) {
-            return false;
-        }
-        return true;
-    }).css('display', 'none');
-});
-
-$('.clear').click(function(event) {
-    var clearTarget = $(event.currentTarget).attr('for');
-    $('#' + clearTarget).val('');
-    $('#' + clearTarget).trigger('keyup');
-});
-
 function selectAndBrushCode(source) {
     $('.content').html('<pre>LOADING...</pre>');
     $('#menu ul').html('');
@@ -59,6 +43,7 @@ function selectAndBrushCode(source) {
         }), $.ajax({
             url: 'json/' + source + '-helpers.json',
             success: function(sourceHelpers) {
+                apiPrefix = sourceHelpers.apiPrefix;
                 blocks = sourceHelpers.blocks;
             }
         })
@@ -68,6 +53,7 @@ function selectAndBrushCode(source) {
             blocks.forEach(function(block) {
                 setCodeBlock(block);
                 setBlockNote(block);
+                setBlockApi(block);
             });
             $('body').scrollspy({
                 target: '#menu'
@@ -80,7 +66,8 @@ function selectAndBrushCode(source) {
 function brushCode(rawCode) {
     var encodedCode = htmlEncode(rawCode);
     $('.content').html('<div id="source"><pre class="brush:js; toolbar: false;">' + encodedCode + '</pre></div>');
-    $('.content').append('<div id="blockNote"></div>');
+    $('.content').append('<div id="blockNotes"></div>');
+    $('.content').append('<div id="apis"></div>')
     SyntaxHighlighter.defaults['quick-code'] = false;
     SyntaxHighlighter.highlight();
 }
@@ -131,6 +118,34 @@ function setBlockNote(block) {
             $blockNote.append($dependency);
         });
 
-        $('#blockNote').append($blockNote);
+        $('#blockNotes').append($blockNote);
     }
 }
+
+function setBlockApi(block) {
+    if (block.api) {
+        var api = apiPrefix + block.api;
+        var $api = $('<a>API</a>')
+            .attr('href', api)
+            .css('top', $('.code .line.number' + block.line).offset().top - 25)
+            .attr('target', '_blank');
+        $('#apis').append($api);
+    }
+}
+
+// for filter
+$('#filter').keyup(function() {
+    var value = this.value;
+    $('#menu li').css('display', 'block').filter(function() {
+        if ($(this).children().html().toUpperCase().indexOf(value.toUpperCase()) !== -1) {
+            return false;
+        }
+        return true;
+    }).css('display', 'none');
+});
+
+$('.clear').click(function(event) {
+    var clearTarget = $(event.currentTarget).attr('for');
+    $('#' + clearTarget).val('');
+    $('#' + clearTarget).trigger('keyup');
+});

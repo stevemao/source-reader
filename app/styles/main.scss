@@ -68,7 +68,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
         width: 60%;
         float: left;
     }
-    #blockNote {
+    #blockNotes {
         width: 15%;
         float: left;
         .bg-info {
@@ -76,6 +76,14 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
             background-color: #d9edf7;
             padding:10px 10px;
             border-radius: 5px;
+        }
+    }
+
+    #apis{
+        width: 20px;
+        a{
+            position:absolute;
+            margin-left:-50px;
         }
     }
 }

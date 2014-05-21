@@ -1,4 +1,5 @@
 {
+    "apiPrefix": "http://api.jquery.com/",
     "blocks": [{
         "title": "var/deletedIds",
         "style": "h4",
@@ -65,47 +66,58 @@
     }, {
         "title": "jQuery()",
         "style": "h3",
-        "line": 71
+        "line": 71,
+        "api": "jQuery"
     }, {
         "title": "jQuery.fn.toArray()",
         "style": "h5",
-        "line": 102
+        "line": 102,
+        "api": "toArray"
     }, {
         "title": "jQuery.fn.get()",
         "style": "h5",
-        "line": 106
+        "line": 106,
+        "api": "get"
     }, {
         "title": "jQuery.fn.pushStack()",
         "style": "h5",
-        "line": 118
+        "line": 118,
+        "api": "pushStack"
     }, {
         "title": "jQuery.fn.each()",
         "style": "h5",
-        "line": 133
+        "line": 133,
+        "api": "each"
     }, {
         "title": "jQuery.fn.map()",
         "style": "h5",
-        "line": 140
+        "line": 140,
+        "api": "map"
     }, {
         "title": "jQuery.fn.slice()",
         "style": "h5",
-        "line": 146
+        "line": 146,
+        "api": "slice"
     }, {
         "title": "jQuery.fn.first()",
         "style": "h5",
-        "line": 150
+        "line": 150,
+        "api": "first"
     }, {
         "title": "jQuery.fn.last()",
         "style": "h5",
-        "line": 154
+        "line": 154,
+        "api": "last"
     }, {
         "title": "jQuery.fn.eq()",
         "style": "h5",
-        "line": 158
+        "line": 158,
+        "api": "eq"
     }, {
         "title": "jQuery.fn.end()",
         "style": "h5",
-        "line": 164
+        "line": 164,
+        "api": "end"
     }, {
         "title": "Internal use",
         "style": "h4",
@@ -113,7 +125,13 @@
     }, {
         "title": "jQuery.extend()",
         "style": "h3",
-        "line": 175
+        "line": 175,
+        "api": "jQuery.extend"
+    }, {
+        "title": "jQuery.fn.extend()",
+        "style": "h5",
+        "line": 175,
+        "api": "jQuery.fn.extend"
     }, {
         "title": "jQuery.error()",
         "style": "h3",
