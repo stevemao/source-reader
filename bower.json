@@ -1,6 +1,5 @@
 {
   "name": "source-reader",
-  "private": true,
   "dependencies": {
     "sass-bootstrap": "~3.0.0",
     "modernizr": "~2.6.2",
